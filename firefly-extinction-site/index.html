@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly - Fading into Darkness</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <div id="mouse-glow"></div>
+    
+    
+
+    <div class="main-container">
+
+        <header class="hero-section">
+            <div class="hero-text">
+                <h1>FIREFLY</h1>
+                <p>Guardiões da Noite, Desaparecendo na Escuridão</p>
+            </div>
+            <div class="firefly-jar-container">
+                <div class="firefly-jar-css">
+                    <div class="jar-body"></div>
+                    <div class="jar-top"></div>
+                    <div class="jar-lid"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section-decline">
+            <div class="text-content">
+                <h2>O desaparecimento</h2>
+                <p>
+                    O declínio global dos vaga-lumes decorre principalmente da poluição luminosa, que interfere no sinal de bioluminescência crucial para a reprodução, impedindo o acasalamento. Somam-se a essa ameaça a perda de habitat, com a destruição de áreas úmidas essenciais para o desenvolvimento larval, e o uso de pesticidas, que envenenam as larvas vulneráveis que vivem no solo. Estes três fatores combinados estão interrompendo o ciclo de vida do inseto, resultando no seu rápido desaparecimento em muitas regiões
+                </p>
+            </div>
+            <div class="chart-container">
+                <canvas id="populationDeclineChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-impacts">
+            <div class="text-content">
+                <h2>Impactos Ecológicos</h2>
+                <p>
+                    A extinção dos vaga-lumes é impulsionada pela perda de habitat, pesticidas e poluição luminosa, ameaçando o equilíbrio dos ecossistemas.
+Eles são essenciais na cadeia alimentar: as larvas atuam como controle biológico, predando lesmas e caracóis. Além disso, servem como bioindicadores de saúde ambiental.
+A poluição luminosa é um fator crítico, pois interrompe os sinais de bioluminescência vitais para sua reprodução. Sua perda resulta em uma redução da biodiversidade e na ruptura sutil das teias alimentares naturais.
+                </p>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title">Impactos na Natureza</h3>
+                <canvas id="impactsChart"></canvas>
+            </div>
+        </section>
+
+        <section class="section-report">
+            <div class="report-content">
+                <h2>Alerta de Extinção: O que dizem os Cientistas</h2>
+                <div class="report-box">
+                    <p class="source">
+                        Baseado em reportagens e estudos sobre o declínio de vaga-lumes (Fonte: G1 / Pesquisas IUCN).
+                    </p>
+                    <p>
+                        Cientistas e especialistas em conservação têm emitido alertas globais sobre o rápido declínio das populações de vagalumes, com previsões sombrias de que muitas espécies podem desaparecer nas próximas décadas. Os estudos apontam que o problema é impulsionado principalmente por uma combinação de fatores relacionados à atividade humana:
+                    </p>
+                    <ul>
+                        <li>Poluição Luminosa: Considerada a ameaça mais crítica. O excesso de luz artificial noturna (ALAN) ofusca os sinais de bioluminescência que os vagalumes usam para encontrar parceiros e reproduzir, interrompendo o ciclo de vida.</li>
+                        <li>Perda de Habitat: A urbanização, o desmatamento e a drenagem de áreas úmidas (cruciais para as larvas) destroem o ambiente natural.</li>
+                        <li>Pesticidas: O uso de agrotóxicos atinge diretamente as larvas, que vivem no solo ou submersas, prejudicando o crescimento populacional.</li>
+                    </ul>
+                    <p class="final-note">
+                        O alerta final é que, ao perder os vagalumes, perdemos não apenas uma beleza natural, mas um importante bioindicador de qualidade ambiental e um predador natural essencial no controle de pragas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="vaga-lumes-fotos">
+                <img src="./setimg/vagalume.png" alt="">
+            </div>
+
+            
+        </section>
+
+        <footer>
+            <p>Salve Nossos Vagalumes.</p>
+            <div class="social-links">
+                <a href="#"><i class="icon">T</i></a>
+                <a href="#"><i class="icon">I</i></a>
+                <a href="#"><i class="icon">Y</i></a>
+            </div>
+        </footer>
+
+    </div>
+
+    
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
