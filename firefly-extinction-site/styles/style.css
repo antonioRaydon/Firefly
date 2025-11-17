@@ -1,8 +1,3 @@
-/*
-    COMENTÁRIO IMPORTANTE:
-    Substitua 'URL_DA_IMAGEM_DE_FUNDO.jpg' pela URL ou caminho da sua imagem de fundo.
-    Ela deve ser uma imagem escura de floresta ou neblina com luzes suaves.
-*/
 
 :root {
     --dark-bg: #0d1117; /* Fundo muito escuro */
@@ -204,7 +199,10 @@ h2 {
 }
 
 .section-report {
+    /* Tornando o container flexível para controlar a ordem */
     display: flex;
+    /* Em mobile, a ordem é vertical por padrão */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     padding: 50px 0;
@@ -214,6 +212,7 @@ h2 {
 
 .report-content {
     max-width: 800px;
+    order: 1;
 }
 
 .report-box {
@@ -262,11 +261,18 @@ h2 {
     padding-top: 10px;
 }
 
+.vaga-lumes-fotos {
+    width: 100%; /* Ocupa a largura total em mobile */
+    text-align: center;
+    order: 2; /* A imagem vem depois do conteúdo do relatório em mobile */
+    margin-top: 30px; /* Espaço acima da imagem quando ela está abaixo */
+}
+
 .vaga-lumes-fotos img {
-    max-width: 60%;
+   max-width: 80%; /* Ajuste da largura da imagem em mobile */
     height: auto;
-    margin-right: 0%;
-    margin-top: 10rem;
+    margin-right: 0;
+    margin-top: 0; 
     border: 1px solid var(--firefly-yellow);
     border-radius: 5%;
 }
@@ -311,4 +317,108 @@ footer {
         0 0 5px 2px var(--firefly-yellow),
         0 0 15px 5px rgba(255, 235, 59, 0.6),
         0 0 30px 10px rgba(255, 235, 59, 0.4);
+}
+
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 2.2rem; }
+
+    .firefly-jar-css {
+        margin-right: 2rem;
+    }
+    @media (min-width: 1024px) {
+    /* ... (Outros estilos de Desktop) ... */
+
+    .section-report {
+        /* Remove a necessidade de flex-direction: column; 
+           A ordem é irrelevante no layout horizontal se você quiser centralizar */
+        flex-direction: row; 
+        justify-content: center;
+        align-items: flex-start; /* Alinhar o topo */
+        justify-content: center; /* Centraliza o bloco total */
+        gap: 60px; /* Aumenta o espaço entre os elementos */
+        padding: 50px 10%; /* Retorna ao padding original */
+    }
+
+    .report-content {
+        /* Em desktop, volta a ocupar a largura máxima definida */
+        max-width: 800px;
+        /* Revertendo a ordem se houver outros elementos no flex */
+        order: 0; 
+    }
+
+    /* .vaga-lumes-fotos {
+        width: 400px; 
+        max-width: none; 
+        margin-left: 0; 
+    } */
+
+    /* .vaga-lumes-fotos img {
+        max-width: 100%;
+        margin-top: 0;
+    } */
+}
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 1.8rem; }
+    
+
+    .text-content {
+        max-width: 100%;
+        padding: 0 5px; /* Texto bem próximo da borda */
+    }
+
+    .section-decline,
+    .section-impacts {
+        padding: 0 5px; /* Mantém toda a seção mais próxima da lateral */
+    }
+
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .firefly-jar-css {
+        margin-right: 0;
+    }
+
+    .section-decline,
+    .section-impacts {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        margin-right: 0;
+        max-width: 100%;
+    }
+    
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.5rem; }
+
+    body {
+        padding: 0 10px;
+    }
+
+    .firefly-jar-css-container {
+        width: 180px;
+        height: 220px;
+    }
+
+    .firefly-jar-css {
+        width: 150px;
+        height: 215px;
+        
+    }
+    
 }
