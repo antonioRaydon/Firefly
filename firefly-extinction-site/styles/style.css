@@ -30,6 +30,54 @@ body {
     box-sizing: border-box;
 }
 
+.split-text-container {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+}
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
 /* Títulos */
 h1 {
     font-family: var(--font-heading);
@@ -387,6 +435,7 @@ footer {
 
     .firefly-jar-css {
         margin-right: 0;
+        top: 2rem;
     }
 
     .section-decline,
@@ -422,3 +471,5 @@ footer {
     }
     
 }
+
+
