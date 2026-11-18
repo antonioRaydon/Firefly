@@ -1,21 +1,27 @@
-🌃 Vaga-lumes e Poluição Luminosa
-Este repositório contém o código e os recursos visuais para um pequeno projeto focado em conscientizar sobre o impacto ecológico do desaparecimento dos vaga-lumes, com ênfase especial na poluição luminosa como principal ameaça. O projeto utiliza a imagem gerada de um vaga-lume solitário observando uma cidade iluminada para ilustrar o contraste e a problemática.
+# EcoNatureza — Vaga-lumes e poluição luminosa
 
-🌟 Propósito
-O objetivo principal deste site é:
+Landing page educativa sobre as ameaças aos vaga-lumes e atitudes que ajudam a conservar seus habitats. O projeto é feito com HTML, CSS e JavaScript, sem etapa de build.
 
-Informar o público sobre as causas do declínio dos vaga-lumes (poluição luminosa, perda de habitat, pesticidas).
+As interações incluem menu móvel, animação de vaga-lumes controlada por botão, efeito de profundidade no destaque, entrada suave de seções, indicação da seção atual no menu, uma experiência ilustrativa de poluição luminosa e um checklist local de atitudes. Animações respeitam a preferência do sistema por movimento reduzido.
 
-Educar sobre o papel crucial desses insetos como bioindicadores e predadores naturais.
+## Executar localmente
 
-Promover a reflexão sobre o consumo de luz artificial noturna e suas consequências ambientais.
+Abra `firefly-extinction-site/index.html` em um navegador. A fonte DM Sans é carregada do Google Fonts; se não houver conexão, o site usa fontes do sistema.
 
-🛠️ Tecnologias Utilizadas
-O projeto utiliza as tecnologias fundamentais da web para fornecer uma experiência informativa e interativa:
+## Estrutura
 
-HTML5: Para a estrutura e o conteúdo principal (incluindo o texto informativo e a importação da imagem).
+```text
+firefly-extinction-site/
+├── index.html
+├── scripts/
+│   └── script.js
+├── setimg/
+│   ├── IMAGEM_DE_FUNDO.png
+│   └── vagalume.png
+└── styles/
+    └── style.css
+```
 
-CSS3: Para estilização, layout e garantir que o design seja responsivo.
+## Conteúdo e referências
 
-JavaScript (JS): Para adicionar interatividade, como manipulação do DOM (ex: exibir/ocultar informações adicionais), ou possivelmente para recursos como modo escuro adaptativo que realça o tema da luz/escuridão.
-
+O site apresenta ameaças descritas na literatura, sem afirmar um percentual global de declínio. Consulte as pesquisas citadas na seção “Fontes” da página para conhecer o contexto e os limites das evidências.

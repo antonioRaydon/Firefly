@@ -1,107 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firefly - Fading into Darkness</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="Conheça as ameaças aos vaga-lumes e descubra atitudes para proteger seus habitats e a vida noturna.">
+  <title>EcoNatureza — O desaparecimento dos vaga-lumes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
 </head>
 <body>
-
-    <div id="mouse-glow"></div>
-    
-    
-
-    <div class="main-container">
-
-        <header class="hero-section">
-            <!-- <div class="hero-text">
-                <h1>FIREFLY</h1>
-                <p>Guardiões da Noite, Desaparecendo na Escuridão</p>
-            </div> -->
-            <div class="split-text-container">
-                <span class="text-part left">FIRE</span>
-                <span class="text-part right">FLY</span>
-            </div>
-            
-            <div class="firefly-jar-container">
-                <div class="firefly-jar-css">
-                    <div class="jar-body"></div>
-                    <div class="jar-top"></div>
-                    <div class="jar-lid"></div>
-                </div>
-            </div>
-        </header>
-
-        <section class="section-decline">
-            <div class="text-content">
-                <h2>O desaparecimento</h2>
-                <p>
-                    O declínio global dos vaga-lumes decorre principalmente da poluição luminosa, que interfere no sinal de bioluminescência crucial para a reprodução, impedindo o acasalamento. Somam-se a essa ameaça a perda de habitat, com a destruição de áreas úmidas essenciais para o desenvolvimento larval, e o uso de pesticidas, que envenenam as larvas vulneráveis que vivem no solo. Estes três fatores combinados estão interrompendo o ciclo de vida do inseto, resultando no seu rápido desaparecimento em muitas regiões
-                </p>
-            </div>
-            <div class="chart-container">
-                <canvas id="populationDeclineChart"></canvas>
-            </div>
-        </section>
-
-        <section class="section-impacts">
-            <div class="text-content">
-                <h2>Impactos Ecológicos</h2>
-                <p>
-                    A extinção dos vaga-lumes é impulsionada pela perda de habitat, pesticidas e poluição luminosa, ameaçando o equilíbrio dos ecossistemas.
-Eles são essenciais na cadeia alimentar: as larvas atuam como controle biológico, predando lesmas e caracóis. Além disso, servem como bioindicadores de saúde ambiental.
-A poluição luminosa é um fator crítico, pois interrompe os sinais de bioluminescência vitais para sua reprodução. Sua perda resulta em uma redução da biodiversidade e na ruptura sutil das teias alimentares naturais.
-                </p>
-            </div>
-            <div class="chart-container">
-                <h3 class="chart-title">Impactos na Natureza</h3>
-                <canvas id="impactsChart"></canvas>
-            </div>
-        </section>
-
-        <section class="section-report">
-            <div class="report-content">
-                <h2>Alerta de Extinção: O que dizem os Cientistas</h2>
-                <div class="report-box">
-                    <p class="source">
-                        Baseado em reportagens e estudos sobre o declínio de vaga-lumes (Fonte: G1 / Pesquisas IUCN).
-                    </p>
-                    <p>
-                        Cientistas e especialistas em conservação têm emitido alertas globais sobre o rápido declínio das populações de vagalumes, com previsões sombrias de que muitas espécies podem desaparecer nas próximas décadas. Os estudos apontam que o problema é impulsionado principalmente por uma combinação de fatores relacionados à atividade humana:
-                    </p>
-                    <ul>
-                        <li>Poluição Luminosa: Considerada a ameaça mais crítica. O excesso de luz artificial noturna (ALAN) ofusca os sinais de bioluminescência que os vagalumes usam para encontrar parceiros e reproduzir, interrompendo o ciclo de vida.</li>
-                        <li>Perda de Habitat: A urbanização, o desmatamento e a drenagem de áreas úmidas (cruciais para as larvas) destroem o ambiente natural.</li>
-                        <li>Pesticidas: O uso de agrotóxicos atinge diretamente as larvas, que vivem no solo ou submersas, prejudicando o crescimento populacional.</li>
-                    </ul>
-                    <p class="final-note">
-                        O alerta final é que, ao perder os vagalumes, perdemos não apenas uma beleza natural, mas um importante bioindicador de qualidade ambiental e um predador natural essencial no controle de pragas.
-                    </p>
-                </div>
-            </div>
-
-            <!-- <div class="vaga-lumes-fotos">
-                <img src="./setimg/vagalume.png" alt="">
-            </div> -->
-
-            
-        </section>
-
-        <footer>
-            <p>Salve Nossos Vagalumes.</p>
-            <div class="social-links">
-                <a href="#"><i class="icon">T</i></a>
-                <a href="#"><i class="icon">I</i></a>
-                <a href="#"><i class="icon">Y</i></a>
-            </div>
-        </footer>
-
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="EcoNatureza, início">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 26c-9-1-14-8-13-18 8 1 13 6 13 14 0-8 5-13 13-14 1 10-4 17-13 18Zm0 0v16m-8-7c3-5 13-5 16 0M24 28c-5 0-9 4-9 9 5 1 9-1 9-6 0 5 4 7 9 6 0-5-4-9-9-9Z"/></svg>
+        <span>Eco<span>Natureza</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
+        <a class="active" href="#inicio" aria-current="page">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#causas">Causas</a>
+        <a href="#impactos">Impactos</a>
+        <a href="#como-ajudar">Como ajudar</a>
+        <a href="#fontes">Fontes</a>
+      </nav>
+      <a class="header-cta" href="#como-ajudar"><span aria-hidden="true">✦</span> Preserve o agora</a>
     </div>
+  </header>
 
-    
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-image" src="setimg/vagalume.png" alt="Vaga-lume iluminado em uma folha, com uma cidade ao fundo">
+      <div class="hero-shade"></div>
+      <div class="hero-content page-width">
+        <p class="eyebrow"><span></span> Um chamado pela vida noturna</p>
+        <h1 id="hero-title">O desaparecimento<br>dos <em>vaga-lumes</em></h1>
+        <p class="hero-subtitle">Um pequeno brilho que está se apagando do nosso mundo.</p>
+        <div class="gold-rule"></div>
+        <p class="hero-copy">A luz dos vaga-lumes faz parte de noites vivas. Pesquisadores apontam ameaças como a perda de habitat, a poluição luminosa e o uso de pesticidas.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#sobre"><span class="button-icon" aria-hidden="true">↓</span> Entenda o problema</a>
+          <button class="button button-light-toggle" id="firefly-toggle" type="button" aria-pressed="false"><span class="toggle-spark" aria-hidden="true">✦</span><span class="toggle-label">Acender vaga-lumes</span></button>
+        </div>
+      </div>
+      <div class="firefly-field" aria-hidden="true"></div>
+      <span class="sr-only" id="firefly-status" aria-live="polite"></span>
+      <div class="hero-caption">Pequenos sinais. Grandes ecossistemas.</div>
+    </section>
 
-    <script src="scripts/script.js"></script>
+    <section class="intro-cards page-width reveal" id="sobre" aria-label="Resumo sobre os vaga-lumes">
+      <article class="info-card" id="causas">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 5 44 41H4L24 5Z"/><path d="M24 17v11m0 7h.02"/></svg></div>
+        <div><h2>Por que eles estão <em>desaparecendo?</em></h2><p>A transformação dos ambientes, a luz artificial à noite e pesticidas estão entre as pressões que ameaçam populações de vaga-lumes.</p></div>
+      </article>
+      <article class="info-card" id="impactos">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"/><path d="m17 8 3 5-3 4 4 3-1 5-6 1-3 6-5-2m24-20-2 5 4 4-3 4 2 5-5 2-1 8m-11-8 5-3 5 3 1 7"/></svg></div>
+        <div><h2>O que muda quando <em>a noite se apaga?</em></h2><p>A luz interfere nos sinais luminosos usados por muitas espécies. Proteger a escuridão também é cuidar dos habitats noturnos.</p></div>
+      </article>
+      <article class="info-card">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 43V25m0 4C13 29 7 22 7 10c11 0 17 6 17 17Zm0-5c0-11 6-17 17-17 0 12-6 19-17 19ZM13 37c3-5 7-7 11-7s8 2 11 7M17 43h14"/></svg></div>
+        <div><h2>O que podemos <em>fazer?</em></h2><ul class="compact-list"><li>Reduzir luzes externas desnecessárias</li><li>Preservar áreas verdes e úmidas</li><li>Evitar pesticidas no jardim</li></ul></div>
+      </article>
+    </section>
+
+    <section class="night-lab page-width reveal" aria-labelledby="night-title">
+      <div class="night-copy">
+        <p class="eyebrow"><span></span> Experimente</p>
+        <h2 id="night-title">O que acontece quando <em>a noite se ilumina?</em></h2>
+        <p>A luz artificial pode interferir nos sinais luminosos usados por algumas espécies para se comunicar. Mova o controle e observe uma representação visual da mudança no ambiente.</p>
+        <p class="illustration-note">Ilustração conceitual: o controle não representa uma medição científica nem o efeito sobre uma espécie específica.</p>
+      </div>
+      <div class="night-experience" id="night-experience" data-light="15">
+        <div class="night-scene" aria-hidden="true">
+          <span class="scene-moon"></span>
+          <span class="scene-firefly scene-firefly-one"></span>
+          <span class="scene-firefly scene-firefly-two"></span>
+          <span class="scene-firefly scene-firefly-three"></span>
+        </div>
+        <div class="night-controls">
+          <div class="night-output"><span>Iluminação do ambiente</span><output id="light-output" for="light-slider">Baixa</output></div>
+          <label class="sr-only" for="light-slider">Ajuste a intensidade ilustrativa da luz artificial</label>
+          <input id="light-slider" type="range" min="0" max="100" value="15" aria-describedby="light-description">
+          <div class="range-labels"><span>Noite escura</span><span>Muita luz</span></div>
+          <p id="light-description" class="light-description" aria-live="polite">Luzes externas apagadas quando não são necessárias ajudam a preservar a escuridão da noite.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="action-section page-width reveal" aria-labelledby="action-title">
+      <div class="action-heading">
+        <p class="eyebrow"><span></span> Comece perto de você</p>
+        <h2 id="action-title">Um jardim mais amigável à <em>vida noturna</em></h2>
+        <p>Marque as atitudes que você já pratica ou quer experimentar. Cada lugar tem condições diferentes; comece pelo que faz sentido para o seu espaço.</p>
+      </div>
+      <div class="action-progress-wrap">
+        <div class="progress-caption"><span id="action-progress-text">0 de 5 atitudes selecionadas</span><span aria-hidden="true">✦</span></div>
+        <div class="action-progress" id="action-progress" role="progressbar" aria-label="Atitudes selecionadas" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span></span></div>
+      </div>
+      <div class="action-list" id="action-list">
+        <label class="action-item"><input type="checkbox"><span class="checkmark" aria-hidden="true">✓</span><span><strong>Apagar luzes externas</strong><small>Desligue o que não precisa ficar aceso durante a noite.</small></span></label>
+        <label class="action-item"><input type="checkbox"><span class="checkmark" aria-hidden="true">✓</span><span><strong>Direcionar a iluminação</strong><small>Use luminárias voltadas para baixo e evite iluminar plantas e áreas naturais.</small></span></label>
+        <label class="action-item"><input type="checkbox"><span class="checkmark" aria-hidden="true">✓</span><span><strong>Reduzir intensidade e duração</strong><small>Prefira luzes menos intensas, temporizadores ou sensores quando possível.</small></span></label>
+        <label class="action-item"><input type="checkbox"><span class="checkmark" aria-hidden="true">✓</span><span><strong>Manter um canto natural</strong><small>Preserve vegetação e folhas em uma parte tranquila do jardim.</small></span></label>
+        <label class="action-item"><input type="checkbox"><span class="checkmark" aria-hidden="true">✓</span><span><strong>Evitar pesticidas no jardim</strong><small>Procure alternativas adequadas antes de aplicar produtos químicos.</small></span></label>
+      </div>
+    </section>
+
+    <section class="help-banner reveal" id="como-ajudar" aria-labelledby="help-title">
+      <div class="help-image" aria-hidden="true"></div>
+      <div class="firefly-field firefly-field-small" aria-hidden="true"></div>
+      <div class="help-content page-width">
+        <p class="eyebrow"><span></span> Pequenas atitudes fazem diferença</p>
+        <h2 id="help-title">Vamos cuidar dos <em>vaga-lumes?</em></h2>
+        <p>Apague luzes externas quando não forem necessárias, escolha iluminação direcionada e acolha um pedaço mais natural no seu jardim.</p>
+        <a class="button button-outline" href="#fontes"><span aria-hidden="true">✦</span> Saiba mais e compartilhe</a>
+      </div>
+    </section>
+
+    <section class="sources page-width reveal" id="fontes" aria-labelledby="sources-title">
+      <div>
+        <p class="eyebrow"><span></span> Informação com contexto</p>
+        <h2 id="sources-title">Conheça as pesquisas</h2>
+      </div>
+      <p class="sources-note">As ameaças variam entre espécies e regiões. Não existe uma única estimativa global que represente o declínio de todos os vaga-lumes; por isso, esta página não apresenta percentuais ilustrativos como dados reais.</p>
+      <ul class="source-links">
+        <li><a href="https://doi.org/10.1093/biosci/biz157" target="_blank" rel="noopener noreferrer">Lewis et al. (2020) — A Global Perspective on Firefly Extinction Threats <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10815995/" target="_blank" rel="noopener noreferrer">Fallon et al. (2024) — Illuminating Firefly Diversity: Trends, Threats and Conservation Strategies <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 26c-9-1-14-8-13-18 8 1 13 6 13 14 0-8 5-13 13-14 1 10-4 17-13 18Zm0 0v16m-8-7c3-5 13-5 16 0"/></svg><span>Eco<span>Natureza</span></span></a>
+    <p>Um projeto de conscientização sobre vaga-lumes e vida noturna.</p>
+    <a class="back-top" href="#inicio">Voltar ao topo ↑</a>
+  </footer>
 </body>
 </html>
